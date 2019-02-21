@@ -1,0 +1,21 @@
+fixit_homepage:
+    path:     /
+    defaults: { _controller: FixItBundle:Frontend:Home }
+fixit_aboutus:
+    path:     /aboutus
+    defaults: { _controller: FixItBundle:Frontend:aboutus }
+fixit_services:
+    path:     /services
+    defaults: { _controller: FixItBundle:Frontend:services }
+fixit_gallery:
+    path:     /gallery
+    defaults: { _controller: FixItBundle:Frontend:gallery }
+fixit_contactus:
+    path:     /contactus
+    defaults: { _controller: FixItBundle:Frontend:contactus }
+fixit_AddOffre:
+    path:     /AddOffre
+    defaults: { _controller: FixItBundle:Frontend:AddOffre }
+fixit_AddService:
+    path:     /AddService
+    defaults: { _controller: FixItBundle:Frontend:AddService }

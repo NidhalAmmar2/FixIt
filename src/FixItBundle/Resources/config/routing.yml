@@ -1,0 +1,15 @@
+fix_it:
+    path:     /
+    defaults: { _controller: FixItBundle:Default:index }
+fixit_frontend:
+    resource: "@FixItBundle/Resources/config/Frontend_routing.yml"
+    prefix:   /fixit
+admin:
+    resource: "@FixItBundle/Resources/config/Admin_routing.yml"
+    prefix:   /admi
+fix_it_offre:
+    resource: "@FixItBundle/Resources/config/routing/offre.yml"
+    prefix:   /offre
+fix_it_service:
+    resource: "@FixItBundle/Resources/config/routing/service.yml"
+    prefix:   /service

@@ -1,0 +1,97 @@
+{% extends 'baseFrontend.html.twig' %}
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    {{ parent() }}
+    <body style="">
+    <!-- Page Wrap ===========================================-->
+    <div id="wrap">
+        <!--======= OFFER SERVICES =========-->
+        <section class="offer-services offer-services-2">
+            <div class="container">
+                <!--======= TITTLE =========-->
+                <div class="tittle">
+                    <h2>our HandyMan services</h2>
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-3">
+                        <div role="tabpanel">
+                            <!--======= NAV TABS =========-->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#plumb" role="tab" data-toggle="tab">all
+                                        services<i class="animated bounceInLeft fa fa-long-arrow-right"></i></a></li>
+                                {% for i in services %}
+                                <li role="presentation"><a href="#drain" role="tab" data-toggle="tab">{{ i.nom }}
+                                        <i class="animated bounceInLeft fa fa-long-arrow-right"></i></a></li>
+                                {% endfor %}
+
+
+                            </ul>
+
+                            <div>
+                                <a type="submit" value="submit" class="btn" id="btn_submit" onclick="proceed();">Add a new Service!
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--======= 24/7 emergency services =========-->
+                        <div class="emer-servic">
+                            <h5>24/7 emergency<br>
+                                services</h5>
+                            <span class="call-em">
+                                Contact
+                                us
+                                today
+                            </span>
+                            <p>To schedule Services</p>
+                        </div>
+                    </div>
+
+                    <!--======= NAV TABS CONTENT =========-->
+                    <div class="col-sm-9">
+
+                        <!--======= ABOUT MORE =========-->
+                        <div class="about-more">
+                            {% for i in offres %}
+
+                                <h4>{{ i.Titre }}</h4>
+                                <h6>{{ i.budget }}</h6>
+                                {{ app.user.username }}
+                                <p>{{ i.Description }}</p>
+
+                                <a href="#." class="btn">Contact</a>
+                                <br>
+
+                            {% endfor %}
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--======= WHY CHOOSE US =========-->
+        <section class="call-us">
+            <div class="call-inner">
+                <div class="container">
+                    <h3>Don't See What You Need? Call Us today!</h3>
+                    <h1>+61 (123) 456 789</h1>
+                </div>
+            </div>
+        </section>
+
+        <!--======= FOOTER =========-->
+
+    </div>
+    {% block script %}
+        {{ parent() }}
+    {% endblock %}
+
+    </body>
+{% endblock %}
